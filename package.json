@@ -1,0 +1,19 @@
+{
+  "name": "jungle-cook",
+  "version": "1.0.0",
+  "description": "Pierce Issah",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "server": "live-server dist",
+    "compile-sass": "sass dist/scss/styles.scss dist/css/styles.css -w"
+  },
+  "keywords": [],
+  "author": "Pierce Issah",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.4"
+  }
+}
