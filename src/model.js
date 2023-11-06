@@ -1,4 +1,4 @@
-function changeRoute() {
+export function changeRoute() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
   console.log(hashTag + " " + pageID);
