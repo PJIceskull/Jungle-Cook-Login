@@ -10,7 +10,7 @@ Pierce Issah
 
 [Web-4 link](https://in-info-web4.informatics.iupui.edu/~pissah/N315/homework-seven)
 
-[Github Pages](https://pjiceskull.github.io/Jungle-Cook/)
+[Github Pages](https://pjiceskull.github.io/Jungle-Cook-Login/dist/)
 
 ## About Project
 
