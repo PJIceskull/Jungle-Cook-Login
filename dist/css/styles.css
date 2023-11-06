@@ -446,13 +446,13 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
-#Login-Page form {
+#Login-Page div {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
 }
-#Login-Page form h1 {
+#Login-Page div h1 {
   font-size: 30px;
   margin-bottom: 0;
   font-family: Lato-Black;
@@ -462,7 +462,7 @@ main {
   font-size: 12px;
   margin-bottom: 0;
 }
-#Login-Page form input {
+#Login-Page div input {
   margin-top: 51.5px;
   background-color: #ffd972;
   color: #000;
@@ -474,10 +474,10 @@ main {
   border: none;
   border-bottom: 3px solid #000;
 }
-#Login-Page form input::placeholder {
+#Login-Page div input::placeholder {
   color: #000;
 }
-#Login-Page form button {
+#Login-Page div button {
   height: 52px;
   background-color: #ffd972;
   font-family: Caveat-Regular;
@@ -486,7 +486,7 @@ main {
   margin-top: 52.5px;
   border-style: none;
 }
-#Login-Page form button:hover {
+#Login-Page div button:hover {
   background-color: #000;
   color: #ffd972;
   transition: 0.3s;
