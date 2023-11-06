@@ -13,7 +13,7 @@ function changeRoute() {
     });
   } else {
     $.get(`pages/login.html`, function (data) {
-      console.log("data " + data);
+      // console.log("data " + data);
       $("#app").html(data);
     }).fail(function () {
       alert(pageID + " page not found.");
