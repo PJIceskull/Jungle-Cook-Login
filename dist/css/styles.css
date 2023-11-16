@@ -209,6 +209,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  top: 756px;
 }
 footer .links {
   display: flex;
@@ -260,6 +261,9 @@ footer .socialIcons img {
 }
 
 @media screen and (max-width: 780px) {
+  footer {
+    top: 970px;
+  }
   footer .links {
     width: 400px;
   }
@@ -280,6 +284,7 @@ footer .socialIcons img {
     align-items: center;
     justify-content: space-evenly;
     height: 67px;
+    top: 930px;
   }
   .mobile-Footer .links {
     width: 95%;
@@ -327,15 +332,6 @@ nav {
   margin-top: 20px;
 }
 
-footer {
-  top: 756px;
-}
-
-@media screen and (max-width: 430px) {
-  footer {
-    top: 730px;
-  }
-}
 main {
   min-height: 800px;
   width: 100%;
@@ -446,13 +442,13 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
-#Login-Page div {
+#Login-Page form {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
 }
-#Login-Page div h1 {
+#Login-Page form h1 {
   font-size: 30px;
   margin-bottom: 0;
   font-family: Lato-Black;
@@ -462,7 +458,7 @@ main {
   font-size: 12px;
   margin-bottom: 0;
 }
-#Login-Page div input {
+#Login-Page form input {
   margin-top: 51.5px;
   background-color: #ffd972;
   color: #000;
@@ -474,10 +470,10 @@ main {
   border: none;
   border-bottom: 3px solid #000;
 }
-#Login-Page div input::placeholder {
+#Login-Page form input::placeholder {
   color: #000;
 }
-#Login-Page div button {
+#Login-Page form button {
   height: 52px;
   background-color: #ffd972;
   font-family: Caveat-Regular;
@@ -486,7 +482,7 @@ main {
   margin-top: 52.5px;
   border-style: none;
 }
-#Login-Page div button:hover {
+#Login-Page form button:hover {
   background-color: #000;
   color: #ffd972;
   transition: 0.3s;
