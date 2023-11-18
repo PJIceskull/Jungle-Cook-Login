@@ -442,23 +442,27 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
-#Login-Page form {
+#Login-Page .login-Form,
+#Login-Page .signin-Form {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
 }
-#Login-Page form h1 {
+#Login-Page .login-Form h1,
+#Login-Page .signin-Form h1 {
   font-size: 30px;
   margin-bottom: 0;
   font-family: Lato-Black;
 }
-#Login-Page form p {
+#Login-Page .login-Form p,
+#Login-Page .signin-Form p {
   font-family: Lato-LightItalic;
   font-size: 12px;
   margin-bottom: 0;
 }
-#Login-Page form input {
+#Login-Page .login-Form input,
+#Login-Page .signin-Form input {
   margin-top: 51.5px;
   background-color: #ffd972;
   color: #000;
@@ -470,10 +474,12 @@ main {
   border: none;
   border-bottom: 3px solid #000;
 }
-#Login-Page form input::placeholder {
+#Login-Page .login-Form input::placeholder,
+#Login-Page .signin-Form input::placeholder {
   color: #000;
 }
-#Login-Page form button {
+#Login-Page .login-Form button,
+#Login-Page .signin-Form button {
   height: 52px;
   background-color: #ffd972;
   font-family: Caveat-Regular;
@@ -482,7 +488,8 @@ main {
   margin-top: 52.5px;
   border-style: none;
 }
-#Login-Page form button:hover {
+#Login-Page .login-Form button:hover,
+#Login-Page .signin-Form button:hover {
   background-color: #000;
   color: #ffd972;
   transition: 0.3s;
