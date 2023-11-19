@@ -90,7 +90,7 @@ export function addFormListener() {
         // Signed in
         const user = userCredential.user;
         // ...
-        // alert("You have just Login!");
+        alert("You have just Login!");
         console.log(user);
         changePage();
         if (user) {
