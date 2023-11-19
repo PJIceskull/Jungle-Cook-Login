@@ -8,7 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist/app"),
     filename: "app.js",
   },
-  plugins: [new ESLintPlugin(options)],
   //   this will set a watcher on the index.js file for any changes
   watch: true,
 };
