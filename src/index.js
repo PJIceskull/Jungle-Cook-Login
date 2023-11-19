@@ -7,6 +7,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "firebase/auth"; // look for the auth folder
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -38,15 +39,10 @@ function initListeners() {
   $(".hamburger-menu").on("click", function () {
     $(this).toggleClass("open");
   });
-
-  $("footer").on("click", function () {
-    console.log($(".signinBTN"));
-    console.log("Hello");
-  });
 }
 
 export function addFormListener() {
-  console.log("Form Listen");
+  // console.log("Form Listen");
   $(".signinBTN").on("click", function () {
     console.log($(".signinBTN"));
     console.log("Hello");
@@ -57,7 +53,7 @@ export function addFormListener() {
   $(".signinBTN").on("click", function (e) {
     e.preventDefault();
     console.log("Sign In");
-    console.log($("signinBTN"));
+    // console.log($("signinBTN"));
 
     // Variables for inputs
     let fName = $("#fName").val();
@@ -85,7 +81,7 @@ export function addFormListener() {
   // Login
   $(".loginBTN").on("click", function (e) {
     e.preventDefault();
-    console.log("Sign In");
+    // console.log("Sign In");
     let email = $("#email").val();
     let pword = $("#pword").val();
 
@@ -94,7 +90,15 @@ export function addFormListener() {
         // Signed in
         const user = userCredential.user;
         // ...
+        // alert("You have just Login!");
         console.log(user);
+        changePage();
+        if (user) {
+          // Toggle class and changed Text
+          $(".login a").text("Log Out");
+          $(".login").addClass("logOut");
+          // $(".loginBTN").addClass("logOut");
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -104,10 +108,33 @@ export function addFormListener() {
       });
     console.log("Logged In");
   });
+
+  // Sign Out
+  $(".logOut").on("click", function (e) {
+    // console.log($(".logOut"));
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        // Print to Console
+        console.log("Sign Out");
+        console.log(auth);
+
+        alert("You have Logged out!");
+        $(".login").removeClass("logOut");
+        $(".login a").text("Login");
+        changePage();
+      })
+      .catch((error) => {
+        // An error happened.
+        const errorMessage = error.message;
+        // ..
+        alert("Error Message " + errorMessage);
+      });
+  });
 }
 
 $(document).ready(function () {
-  // $(window).on("hashchange", changePage);
-  changePage("login");
+  $(window).on("hashchange", changePage);
+  changePage();
   initListeners();
 });
